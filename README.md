@@ -49,6 +49,7 @@ npm run dev
 
 | 模块 | 目录 | 业务对象 | 主要字段 |
 | --- | --- | --- | --- |
+| 安全费用台账 | `safetyfee` | 安全生产费用提取、使用与结转 | 账期、原煤产量、提取比例、凭证号、使用金额、结余 |
 | 矿区台账 | `minearea` | 矿区 | 矿区编号、矿区名称、开采矿种 |
 | 瓦斯监测 | `gas` | 瓦斯测点 | 测点编号、所在区域、瓦斯浓度 |
 | 通风系统 | `ventilation` | 通风设备 | 设备编号、设备类型、额定风量 |
@@ -76,3 +77,5 @@ npm run dev
   `backend/app/routers/<模块>.py`，业务规则在 `backend/app/services/<模块>.py`。
 - 列表接口统一返回 `{ items, total, page, size }`，动作接口统一返回 `{ ok, message }`。
 - 状态流转只允许在 `app/services` 里改，路由层不做业务判断。
+- 安全费用台账使用 `/api/safetyfee/ledger` 作为页面明细、`/api/safetyfee/export` 对账文件和
+  `/api/safetyfee/balance` 结余查询的统一口径；月末结转接口把使用登记和结余固化放在同一事务里。

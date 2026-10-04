@@ -26,5 +26,6 @@ from app.routers import roadway as router_roadway
 from app.routers import monitorstation as router_monitorstation
 from app.routers import certificate as router_certificate
 from app.routers import emergencydrill as router_emergencydrill
+from app.routers import safetyfee as router_safetyfee
 
-ROUTERS = [router_minearea, router_gas, router_ventilation, router_roof, router_waterhazard, router_rockburst, router_personnel, router_dust, router_fireprevent, router_belt, router_hoist, router_power, router_rescue, router_training, router_shift, router_explosive, router_roadway, router_monitorstation, router_certificate, router_emergencydrill]
+ROUTERS = [router_minearea, router_gas, router_ventilation, router_roof, router_waterhazard, router_rockburst, router_personnel, router_dust, router_fireprevent, router_belt, router_hoist, router_power, router_rescue, router_training, router_shift, router_explosive, router_roadway, router_monitorstation, router_certificate, router_emergencydrill, router_safetyfee]
